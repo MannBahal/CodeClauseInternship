@@ -1,0 +1,56 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.countdown-container {
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    text-align: center;
+}
+
+.countdown-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.countdown-container label {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.countdown-container input[type="datetime-local"] {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+    background-color: #444;
+    color: #fff;
+}
+
+.countdown-container button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.countdown-container button:hover {
+    background-color: #4cae4c;
+}
+
+.timer {
+    font-size: 36px;
+    margin-top: 30px;
+}
