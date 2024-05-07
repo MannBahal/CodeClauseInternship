@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff0000, #ffff00);
+        }
+
+        .container {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Background Generator</h1>
+        <input type="color" id="color1">
+        <input type="color" id="color2">
+        <button id="generate">Generate</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const color1 = document.getElementById("color1");
+        const color2 = document.getElementById("color2");
+        const generateButton = document.getElementById("generate");
+        const body = document.querySelector("body");
+
+        function setGradient() {
+            body.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value})`;
+        }
+
+        generateButton.addEventListener("click", setGradient);
+    </script>
+</body>
+</html>
